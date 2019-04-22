@@ -13,6 +13,9 @@ public interface UserService {
 
 
     void update( User user);
+
+
+    User findOne(User user);
 }
 
 

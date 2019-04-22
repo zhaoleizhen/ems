@@ -28,4 +28,9 @@ public class UserServiceImpl implements UserService {
     public void update(User user) {
         userDao.updateByPrimaryKeySelective(user);
     }
+
+    @Override
+    public User findOne(User user) {
+        return userDao.selectOne(user);
+    }
 }
