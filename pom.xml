@@ -24,10 +24,6 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.56</version>
         </dependency>
-
-
-
-
         <!-- lombok插件 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -86,8 +82,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-
-
         <!-- 分页插件pagehelper -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -116,15 +110,14 @@
             <version>2.5</version>
         </dependency>
 
-
-
-
+        <!--引入热部署插件-->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.56</version>
-            <scope>compile</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
+
+
 
 
 
