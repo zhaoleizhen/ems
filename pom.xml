@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>cms</artifactId>
+    <artifactId>ems</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cms</name>
+    <name>ems</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -19,10 +19,47 @@
     </properties>
 
     <dependencies>
+
+        <!--Excel交互-->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.56</version>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <!--阿里云短信验证码-->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>3.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-ecs</artifactId>
+            <version>4.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20171018</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.gitee.qdbp.thirdparty/ueditor -->
+        <dependency>
+            <groupId>com.gitee.qdbp.thirdparty</groupId>
+            <artifactId>ueditor</artifactId>
+            <version>1.4.3.3</version>
+        </dependency>
+        <!-- 音频时长计算 -->
+        <dependency>
+            <groupId>it.sauronsoftware</groupId>
+            <artifactId>jave</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!-- google 验证码jar包 -->
+        <dependency>
+            <groupId>com.google</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>2.0.0</version>
         </dependency>
         <!-- lombok插件 -->
         <dependency>
@@ -82,6 +119,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+        <!-- google 验证码jar包 -->
+
         <!-- 分页插件pagehelper -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -109,21 +148,57 @@
             <artifactId>commons-io</artifactId>
             <version>2.5</version>
         </dependency>
-
-
-
-
-
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.56</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--goeasy相关依赖-->
+        <dependency>
+            <groupId>io.goeasy</groupId>
+            <artifactId>goeasy-sdk</artifactId>
+            <version>0.3.8</version>
+        </dependency>
+        <!--引入热部署插件-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
 
 
 
     </dependencies>
-
+    <!--goeasy相关依赖私有库-->
+    <repositories>
+        <repository>
+            <id>goeasy</id>
+            <name>goeasy</name>
+            <url>http://maven.goeasy.io/content/repositories/releases/</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
 
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.38</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <!--配置文件的路径 -->
+                    <configurationFile>${basedir}/src/main/resources/generatorConfig.xml</configurationFile>
+                    <overwrite>true</overwrite>
+                </configuration>
+            </plugin>
 
 
             <plugin>
@@ -139,8 +214,7 @@
             </plugin>
 
 
-
-
         </plugins>
     </build>
+
 </project>

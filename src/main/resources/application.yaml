@@ -17,7 +17,7 @@ spring:
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/cms
+    url: jdbc:mysql://localhost:3306/ems
     tomcat:
       driver-class-name: com.baizhi.entity
 
