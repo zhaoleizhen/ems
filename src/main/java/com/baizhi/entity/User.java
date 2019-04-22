@@ -51,3 +51,4 @@ public class User {
         this.sex = sex == null ? null : sex.trim();
     }
 }
+
