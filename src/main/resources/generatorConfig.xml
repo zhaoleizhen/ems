@@ -32,8 +32,9 @@
         </javaClientGenerator>
 
         <!-- sql占位符，表示所有的表 -->
-        <table tableName="g_admin">
+        <table tableName="user">
         </table>
-
+        <table tableName="emp">
+        </table>
     </context>
 </generatorConfiguration>

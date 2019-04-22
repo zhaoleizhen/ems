@@ -1,13 +1,15 @@
 package com.baizhi.entity;
 
-public class User {
-    private String id;
+import java.util.Date;
 
-    private String nickname;
+public class Emp {
+    private String id;
 
     private String name;
 
-    private String phone;
+    private Double price;
+
+    private Date createtime;
 
     private String sex;
 
@@ -19,14 +21,6 @@ public class User {
         this.id = id == null ? null : id.trim();
     }
 
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname == null ? null : nickname.trim();
-    }
-
     public String getName() {
         return name;
     }
@@ -35,12 +29,20 @@ public class User {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getPhone() {
-        return phone;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
     public String getSex() {
@@ -51,4 +53,3 @@ public class User {
         this.sex = sex == null ? null : sex.trim();
     }
 }
-
