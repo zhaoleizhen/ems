@@ -8,31 +8,5 @@
     <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
     <result column="sex" property="sex" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
-    delete from emp
-    where ID = #{id,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="com.baizhi.entity.Emp" >
-    insert into emp (ID, NAME, PRICE, 
-      createTime, sex)
-    values (#{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, 
-      #{createtime,jdbcType=TIMESTAMP}, #{sex,jdbcType=VARCHAR})
-  </insert>
-  <update id="updateByPrimaryKey" parameterType="com.baizhi.entity.Emp" >
-    update emp
-    set NAME = #{name,jdbcType=VARCHAR},
-      PRICE = #{price,jdbcType=DOUBLE},
-      createTime = #{createtime,jdbcType=TIMESTAMP},
-      sex = #{sex,jdbcType=VARCHAR}
-    where ID = #{id,jdbcType=VARCHAR}
-  </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select ID, NAME, PRICE, createTime, sex
-    from emp
-    where ID = #{id,jdbcType=VARCHAR}
-  </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select ID, NAME, PRICE, createTime, sex
-    from emp
-  </select>
+
 </mapper>

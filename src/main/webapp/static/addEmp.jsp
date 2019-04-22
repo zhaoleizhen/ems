@@ -1,7 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" pageEncoding="UTF-8" contentType="text/html; UTF-8" %>
+<c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <html>
 	<head>
-		<title>login</title>
+		<title>add Emp</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css"
 			href="css/style.css" />
@@ -19,7 +21,7 @@
 						</div>
 						<div id="topheader">
 							<h1 id="title">
-								<a href="#">main</a>
+								<a href="#">Main</a>
 							</h1>
 						</div>
 						<div id="navigation">
@@ -29,14 +31,14 @@
 					<p id="whereami">
 					</p>
 					<h1>
-						login
+						add Emp info:
 					</h1>
-					<form action="emplist.html" method="post">
+					<form action="emplist.jsp" method="post">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
 								<td valign="middle" align="right">
-									username:
+									name:
 								</td>
 								<td valign="middle" align="left">
 									<input type="text" class="inputgri" name="name" />
@@ -44,17 +46,23 @@
 							</tr>
 							<tr>
 								<td valign="middle" align="right">
-									password:
+									salary:
 								</td>
 								<td valign="middle" align="left">
-									<input type="password" class="inputgri" name="pwd" />
+									<input type="text" class="inputgri" name="salary" />
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									age:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" name="age" />
 								</td>
 							</tr>
 						</table>
 						<p>
-							<input type="submit" class="button" value="Submit &raquo;" />
-							&nbsp;&nbsp;
-							<a href="">注册</a>
+							<input type="submit" class="button" value="Confirm" />
 						</p>
 					</form>
 				</div>

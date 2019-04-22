@@ -8,31 +8,5 @@
     <result column="PHONE" property="phone" jdbcType="VARCHAR" />
     <result column="SEX" property="sex" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
-    delete from user
-    where ID = #{id,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="com.baizhi.entity.User" >
-    insert into user (ID, NICKNAME, NAME, 
-      PHONE, SEX)
-    values (#{id,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
-      #{phone,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR})
-  </insert>
-  <update id="updateByPrimaryKey" parameterType="com.baizhi.entity.User" >
-    update user
-    set NICKNAME = #{nickname,jdbcType=VARCHAR},
-      NAME = #{name,jdbcType=VARCHAR},
-      PHONE = #{phone,jdbcType=VARCHAR},
-      SEX = #{sex,jdbcType=VARCHAR}
-    where ID = #{id,jdbcType=VARCHAR}
-  </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select ID, NICKNAME, NAME, PHONE, SEX
-    from user
-    where ID = #{id,jdbcType=VARCHAR}
-  </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select ID, NICKNAME, NAME, PHONE, SEX
-    from user
-  </select>
+
 </mapper>

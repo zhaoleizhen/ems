@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<title>add Emp</title>
+		<title>update Emp</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css"
 			href="css/style.css" />
@@ -29,17 +29,25 @@
 					<p id="whereami">
 					</p>
 					<h1>
-						add Emp info:
+						update Emp info:
 					</h1>
-					<form action="emplist.html" method="post">
+					<form action="emplist.jsp" method="post">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
+							<tr>
+								<td valign="middle" align="right">
+									id:
+								</td>
+								<td valign="middle" align="left">
+									1
+								</td>
+							</tr>
 							<tr>
 								<td valign="middle" align="right">
 									name:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="name" />
+									<input type="text" class="inputgri" name="name" value="zhangshan"/>
 								</td>
 							</tr>
 							<tr>
@@ -47,7 +55,7 @@
 									salary:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="salary" />
+									<input type="text" class="inputgri" name="salary" value="20000"/>
 								</td>
 							</tr>
 							<tr>
@@ -55,7 +63,7 @@
 									age:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="age" />
+									<input type="text" class="inputgri" name="age" value="20"/>
 								</td>
 							</tr>
 						</table>
