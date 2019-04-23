@@ -33,12 +33,12 @@
 					<h1>
 						login
 					</h1>
-					<form action="${app}/static/emplist.jsp" method="get">
+					<form action="${app}/user/login" method="get">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
 								<td valign="middle" align="right">
-									username:
+									姓名:
 								</td>
 								<td valign="middle" align="left">
 									<input type="text" class="inputgri" name="name" />
@@ -46,10 +46,10 @@
 							</tr>
 							<tr>
 								<td valign="middle" align="right">
-									password:
+									手机号:
 								</td>
 								<td valign="middle" align="left">
-									<input type="password" class="inputgri" name="pwd" />
+									<input type="password" class="inputgri" name="phone" />
 								</td>
 							</tr>
 						</table>
