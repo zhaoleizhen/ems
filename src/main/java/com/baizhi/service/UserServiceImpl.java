@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.UUID;
+
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
@@ -32,5 +34,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findOne(User user) {
         return userDao.selectOne(user);
+    }
+
+    @Override
+    public void add(User user) {
+        user.setId(UUID.randomUUID().toString());
+        userDao.insert(user);
     }
 }
