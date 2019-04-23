@@ -27,8 +27,8 @@
                             var $createtimetd = $("<td/>").text(emp.createtime);
                             var $sextd = $("<td/>").text(emp.sex);
                             var $opetd = $("<td/>");
-                            var $upd = $("<button onclick='javascript:upd("+emp.id+")'/>").text("修改");
-                            var $del = $("<button onclick='javascript:del("+emp.id+")'/>").text("删除");
+                            var $upd = $("<button onclick='javascript:upd(\""+emp.id+"\");'/>").text("修改");
+                            var $del = $("<button onclick='javascript:del(\""+emp.id+"\");'/>").text("删除");
                             $opetd.append($upd).append($del);
                             $tr.append($idtd).append($nametd).append($pricetd).append($createtimetd).append($sextd).append($opetd);
                             $("#tab").append($tr);
