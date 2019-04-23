@@ -12,6 +12,27 @@
 				    "/emp/findAll",
 					function (result) {
                         console.log(result);
+                        var a = 1;
+                        $.each(result,function (i,emp) {
+                            if(a>0){
+								a=-1;
+                                var $tr = $("<tr class='row1'/>");
+                            }else {
+                                a=1;
+                                var $tr = $("<tr class='row2'/>");
+							}
+                            var $idtd = $("<td/>").text(emp.id);
+                            var $nametd = $("<td/>").text(emp.name);
+                            var $pricetd = $("<td/>").text(emp.price);
+                            var $createtimetd = $("<td/>").text(emp.createtime);
+                            var $sextd = $("<td/>").text(emp.sex);
+                            var $opetd = $("<td/>");
+                            var $upd = $("<button/>").text("修改");
+                            var $del = $("<button/>").text("删除");
+                            $opetd.append($upd).append($del);
+                            $tr.append($idtd).append($nametd).append($pricetd).append($createtimetd).append($sextd).append($opetd);
+                            $("#tab").append($tr);
+                        })
                     },
 					"JSON"
 				);
@@ -43,7 +64,7 @@
 					<h1>
 						Welcome!
 					</h1>
-					<table class="table">
+					<table class="table" id="tab">
 						<tr class="table_header">
 							<td>
 								ID
@@ -55,27 +76,13 @@
 								Salary
 							</td>
 							<td>
-								Age
+								CreateTime
+							</td>
+							<td>
+								Sex
 							</td>
 							<td>
 								Operation
-							</td>
-						</tr>
-						<tr class="row1">
-							<td>
-								1
-							</td>
-							<td>
-								zhangshan
-							</td>
-							<td>
-								20000
-							</td>
-							<td>
-								20
-							</td>
-							<td>
-								<a href="emplist.jsp">delete emp</a>&nbsp;<a href="updateEmp.jsp">update emp</a>
 							</td>
 						</tr>
 					</table>

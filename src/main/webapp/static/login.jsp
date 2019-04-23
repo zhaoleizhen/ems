@@ -56,7 +56,7 @@
 						<p>
 							<input type="submit" class="button" value="Submit &raquo;" />
 							&nbsp;&nbsp;
-							<a href="">注册</a>
+							<a href="${app}/static/regist.jsp">注册</a>
 						</p>
 					</form>
 				</div>

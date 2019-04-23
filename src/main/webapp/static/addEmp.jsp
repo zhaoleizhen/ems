@@ -13,7 +13,7 @@
                 $("#btn").click(function () {
                     var jQuery = $("#tiJiao").serialize();
                     $.post("${pageContext.request.contextPath}/emp/add",jQuery,function () {
-                        window.location.replace("${pageContext.request.contextPath}/static/emplist.jsp");
+                        //window.location.replace("${pageContext.request.contextPath}/static/emplist.jsp");
                     })
                 })
             })
