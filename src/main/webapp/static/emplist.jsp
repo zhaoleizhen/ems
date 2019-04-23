@@ -62,7 +62,7 @@
 								20
 							</td>
 							<td>
-								<a href="emplist.html">delete emp</a>&nbsp;<a href="updateEmp.html">update emp</a>
+								<a href="emplist.jsp">delete emp</a>&nbsp;<a href="updateEmp.jsp">update emp</a>
 							</td>
 						</tr>
 						<tr class="row2">
@@ -79,12 +79,12 @@
 								20
 							</td>
 							<td>
-								<a href="emplist.html">delete emp</a>&nbsp;<a href="updateEmp.html">update emp</a>
+								<a href="emplist.jsp">delete emp</a>&nbsp;<a href="updateEmp.jsp">update emp</a>
 							</td>
 						</tr>
 					</table>
 					<p>
-						<input type="button" class="button" value="Add Employee" onclick="location='addEmp.html'"/>
+						<input type="button" class="button" value="Add Employee" onclick="location='addEmp.jsp'"/>
 					</p>
 				</div>
 				<a href="">1</a>

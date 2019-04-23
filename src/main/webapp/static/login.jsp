@@ -1,7 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page isELIgnored="false" pageEncoding="UTF-8" contentType="text/html; UTF-8" %>
+<c:set var="app" value="${pageContext.request.contextPath}"></c:set>
 <html>
 	<head>
-		<title>update Emp</title>
+		<title>login</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css"
 			href="css/style.css" />
@@ -19,7 +21,7 @@
 						</div>
 						<div id="topheader">
 							<h1 id="title">
-								<a href="#">Main</a>
+								<a href="#">main</a>
 							</h1>
 						</div>
 						<div id="navigation">
@@ -29,46 +31,32 @@
 					<p id="whereami">
 					</p>
 					<h1>
-						update Emp info:
+						login
 					</h1>
-					<form action="emplist.html" method="post">
+					<form action="${app}/static/emplist.jsp" method="get">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
 								<td valign="middle" align="right">
-									id:
+									username:
 								</td>
 								<td valign="middle" align="left">
-									1
+									<input type="text" class="inputgri" name="name" />
 								</td>
 							</tr>
 							<tr>
 								<td valign="middle" align="right">
-									name:
+									password:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="name" value="zhangshan"/>
-								</td>
-							</tr>
-							<tr>
-								<td valign="middle" align="right">
-									salary:
-								</td>
-								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="salary" value="20000"/>
-								</td>
-							</tr>
-							<tr>
-								<td valign="middle" align="right">
-									age:
-								</td>
-								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="age" value="20"/>
+									<input type="password" class="inputgri" name="pwd" />
 								</td>
 							</tr>
 						</table>
 						<p>
-							<input type="submit" class="button" value="Confirm" />
+							<input type="submit" class="button" value="Submit &raquo;" />
+							&nbsp;&nbsp;
+							<a href="">注册</a>
 						</p>
 					</form>
 				</div>
