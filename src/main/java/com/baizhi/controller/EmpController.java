@@ -17,7 +17,7 @@ public class EmpController {
 
     @RequestMapping("findAll")
     public List<Emp> findAll(){
-        return null;
+        return service.findAll();
     }
 
 }

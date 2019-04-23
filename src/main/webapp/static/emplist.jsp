@@ -1,9 +1,22 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 		<title>emplist</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="./js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function () {
+				$.post(
+				    "/emp/findAll",
+					function (result) {
+                        console.log(result);
+                    },
+					"JSON"
+				);
+            })
+		</script>
 	</head>
 	<body>
 		<div id="wrap">
@@ -54,23 +67,6 @@
 							</td>
 							<td>
 								zhangshan
-							</td>
-							<td>
-								20000
-							</td>
-							<td>
-								20
-							</td>
-							<td>
-								<a href="emplist.jsp">delete emp</a>&nbsp;<a href="updateEmp.jsp">update emp</a>
-							</td>
-						</tr>
-						<tr class="row2">
-							<td>
-								2
-							</td>
-							<td>
-								lishi
 							</td>
 							<td>
 								20000
