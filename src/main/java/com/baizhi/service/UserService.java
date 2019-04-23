@@ -16,6 +16,8 @@ public interface UserService {
 
 
     User findOne(User user);
+
+    void add(User user);
 }
 
 

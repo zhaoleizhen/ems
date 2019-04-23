@@ -61,7 +61,7 @@
 									salary:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="salary" />
+									<input type="text" class="inputgri" name="price" />
 								</td>
 							</tr>
 							<tr>
@@ -72,6 +72,15 @@
 									<input type="text" class="inputgri" name="age" />
 								</td>
 							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									sex:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" name="sex" />
+								</td>
+							</tr>
+
 						</table>
 						<p>
 							<input type="submit" class="button" value="Confirm" id="btn"/>
