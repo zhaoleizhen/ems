@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("emp")
@@ -18,6 +19,11 @@ public class EmpController {
     @RequestMapping("findAll")
     public List<Emp> findAll(){
         return service.findAll();
+    }
+    @RequestMapping("add")
+    public void add(Emp emp){
+        emp.setId(UUID.randomUUID().toString());
+        service.add(emp);
     }
 
 }
