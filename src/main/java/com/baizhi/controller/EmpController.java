@@ -17,8 +17,8 @@ public class EmpController {
     private EmpService service;
 
     @RequestMapping("findAll")
-    public List<Emp> findAll(){
-        return null;
+    public String findAll(){
+        return "redirect:/emplist.jsp";
     }
     @RequestMapping("add")
     public void add(Emp emp){

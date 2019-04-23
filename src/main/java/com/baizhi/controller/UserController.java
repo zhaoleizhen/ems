@@ -13,6 +13,7 @@ public class UserController {
     private UserService service;
     @RequestMapping("login")
     public String login(User user){
+        System.out.println(user);
         User userFromDb = service.findOne(user);
         if (userFromDb!=null){
             return "redirect:/emp/findAll";
