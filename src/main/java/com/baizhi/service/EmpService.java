@@ -1,8 +1,6 @@
 package com.baizhi.service;
 
 import com.baizhi.entity.Emp;
-import com.baizhi.entity.User;
-import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
@@ -14,5 +12,6 @@ public interface EmpService {
 
 
     void update(Emp emp);
+    void add(Emp emp);
 
 }

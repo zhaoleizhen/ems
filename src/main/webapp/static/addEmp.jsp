@@ -7,6 +7,18 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css"
 			href="css/style.css" />
+		<script src="../static/js/jquery-3.3.1.min.js"></script>
+		<script>
+            $(function () {
+                $("#btn").click(function () {
+                    var jQuery = $("#tiJiao").serialize();
+                    $.post("${pageContext.request.contextPath}/emp/add",jQuery,function () {
+                        window.location.replace("${pageContext.request.contextPath}/emplist.jsp");
+                    })
+                })
+            })
+
+		</script>
 	</head>
 
 	<body>
@@ -33,7 +45,7 @@
 					<h1>
 						add Emp info:
 					</h1>
-					<form action="emplist.jsp" method="post">
+					<form action="emplist.jsp" method="post" id="tiJiao">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
@@ -62,7 +74,7 @@
 							</tr>
 						</table>
 						<p>
-							<input type="submit" class="button" value="Confirm" />
+							<input type="submit" class="button" value="Confirm" id="btn"/>
 						</p>
 					</form>
 				</div>

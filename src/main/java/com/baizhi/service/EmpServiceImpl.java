@@ -2,9 +2,6 @@ package com.baizhi.service;
 
 import com.baizhi.dao.EmpMapper;
 import com.baizhi.entity.Emp;
-import com.baizhi.entity.User;
-import org.apache.ibatis.session.RowBounds;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,5 +29,8 @@ public class EmpServiceImpl implements EmpService{
         empMapper.updateByPrimaryKeySelective(emp);
     }
 
-
+    @Override
+    public void add(Emp emp) {
+        empMapper.insert(emp);
+    }
 }
