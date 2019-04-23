@@ -1,9 +1,7 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page isELIgnored="false" pageEncoding="UTF-8" contentType="text/html; UTF-8" %>
-<c:set var="app" value="${pageContext.request.contextPath}"></c:set>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<title>login</title>
+		<title>update Emp</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css"
 			href="css/style.css" />
@@ -21,7 +19,7 @@
 						</div>
 						<div id="topheader">
 							<h1 id="title">
-								<a href="#">main</a>
+								<a href="#">Main</a>
 							</h1>
 						</div>
 						<div id="navigation">
@@ -31,32 +29,46 @@
 					<p id="whereami">
 					</p>
 					<h1>
-						login
+						update Emp info:
 					</h1>
-					<form action="${app}/user/login" method="get">
+					<form action="emplist.html" method="post">
 						<table cellpadding="0" cellspacing="0" border="0"
 							class="form_table">
 							<tr>
 								<td valign="middle" align="right">
-									姓名:
+									id:
 								</td>
 								<td valign="middle" align="left">
-									<input type="text" class="inputgri" name="name" />
+									1
 								</td>
 							</tr>
 							<tr>
 								<td valign="middle" align="right">
-									手机号:
+									name:
 								</td>
 								<td valign="middle" align="left">
-									<input type="password" class="inputgri" name="phone" />
+									<input type="text" class="inputgri" name="name" value="zhangshan"/>
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									salary:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" name="salary" value="20000"/>
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									age:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" name="age" value="20"/>
 								</td>
 							</tr>
 						</table>
 						<p>
-							<input type="submit" class="button" value="Submit &raquo;" />
-							&nbsp;&nbsp;
-							<a href="">注册</a>
+							<input type="submit" class="button" value="Confirm" />
 						</p>
 					</form>
 				</div>
