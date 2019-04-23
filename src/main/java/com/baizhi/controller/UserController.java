@@ -18,12 +18,12 @@ public class UserController {
         if (userFromDb!=null){
             return "redirect:/emp/findAll";
         }else {
-            return "redirect:/login.jsp";
+            return "redirect:static/login.jsp";
         }
     }
     @RequestMapping("add")
     public String add(User user){
         service.add(user);
-        return "redirect:/login.jsp";
+        return "redirect:static/login.jsp";
     }
 }

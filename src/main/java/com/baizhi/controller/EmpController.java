@@ -20,13 +20,14 @@ public class EmpController {
 
     @RequestMapping("findAll")
     public String findAll(){
-        return "redirect:/emplist.jsp";
+        return "redirect:static/emplist.jsp";
     }
     @RequestMapping("add")
-    public void add(Emp emp){
+    public String add(Emp emp){
         emp.setCreatetime(new Date());
         emp.setId(UUID.randomUUID().toString());
         service.add(emp);
+        return "redirect:/emp/findAll";
     }
 
 }
